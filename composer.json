@@ -1,0 +1,46 @@
+{
+  "name": "mforest-gsu/oracle",
+  "type": "library",
+  "homepage": "https://github.com/mforest-gsu/oracle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Melody Kimball",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/mforest-gsu/oracle/issues",
+    "wiki": "https://github.com/mforest-gsu/oracle/wiki",
+    "source": "https://github.com/mforest-gsu/oracle"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.1",
+    "doctrine/dbal": "^4.2"
+  },
+  "require-dev": {
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-strict-rules": "^2.0",
+    "squizlabs/php_codesniffer": "^3.11"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "apcu-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Oracle\\": "src/"
+    }
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
+}
